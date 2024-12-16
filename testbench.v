@@ -18,11 +18,46 @@ module traffic_light_controller_tb;
 
 	initial begin
 		// Initialize Inputs
-		clk = 0;
+		clk <= 1'b0;
+        #100;
 
-		always
-            #10 clk = ~clk;
+        clk <= 1'b1;
+        #100;
 
+        clk <= 1'b0;
+        #100;
+
+        clk <= 1'b1;
+        #100;
+
+        clk <= 1'b0;
+        #100;
+
+        clk <= 1'b1;
+        #100;
+
+        clk <= 1'b0;
+        #100;
+
+        clk <= 1'b1;
+        #100;
+
+        clk <= 1'b0;
+        #100;
+
+        clk <= 1'b1;
+        #100;
+
+        clk <= 1'b0;
+        #100;
+
+        clk <= 1'b1;
+        #100;
 	end
+
+    initial begin
+      $dumpfile("dump.vcd");
+      $dumpvars(0);
+    end
       
 endmodule
